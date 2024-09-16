@@ -1,0 +1,9 @@
+.navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+/* Navbar com cor preta quando rolada */
+.navbar.scrolled {
+    background-color: #131313; /* Cor preta */
+}

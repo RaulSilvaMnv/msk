@@ -1,109 +1,5 @@
 <link rel="stylesheet" href="{{asset('css/header.css')}}" media="screen">
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Profissionais</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #131313;
-            color: white;
-        }
-        
-        /* Navbar customizada */
-        .navbar {
-            background-color: #131313; /* Cor escura do background */
-            padding: 1rem 2rem;
-        }
-
-        .navbar-brand {
-            font-size: 1.5rem;
-            color: #f1c40f; /* Cor amarela para a logo */
-            font-weight: bold;
-        }
-
-        .nav-link {
-            color: white;
-            margin-right: 20px;
-            font-size: 1.1rem;
-        }
-
-        .nav-link:hover {
-            color: #f1c40f; /* Efeito hover amarelo */
-        }
-
-        .btn-contact {
-            background-color: #f1c40f;
-            color: black;
-            font-weight: bold;
-            border-radius: 30px;
-            padding: 10px 20px;
-        }
-
-        .btn-contact:hover {
-            background-color: #d4ac0d;
-        }
-
-        .hero-section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #131313, #2e2a0a); /* Gradiente */
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .hero-content img {
-            border-radius: 50%;
-            background-color: #f18d1c; /* Círculo laranja */
-            padding: 20px;
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .hero-content h1 {
-            font-weight: bold;
-            font-size: 2.5rem;
-            color: white;
-        }
-
-        .highlight-text {
-            color: #f1c40f; /* Cor amarela */
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            color: white;
-            margin-bottom: 30px;
-        }
-
-        .custom-button {
-            background-color: #f1c40f;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            color: black;
-            font-weight: bold;
-            border-radius: 50px;
-        }
-
-        .custom-button:hover {
-            background-color: #d4ac0d;
-        }
-    </style>
-</head>
-<body>
+<link rel="stylesheet" href="{{asset('css/navbar.css')}}" media="screen">
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -141,20 +37,51 @@
 
     <!-- Seção Hero -->
     <section class="hero-section">
-        <div class="hero-content">
-            <!-- Imagem circular -->
-            <img src="https://via.placeholder.com/250" alt="Profissional">
-            
-            <!-- Texto principal -->
-            <h1>PROFISSIONAIS <span class="highlight-text">EXPERIENTES</span></h1>
-            <p>Encontre aqui o profissional certo para o seu serviço. De reformas a elétrica doméstica, saiba como e onde encontrar profissionais qualificados.</p>
-            
-            <!-- Botão chamativo -->
-            <a href="#" class="btn custom-button">Profissionais e Serviços</a>
+        <div class="container mt-5">
+            <div class="row align-items-center">
+                <!-- Coluna da Imagem -->
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div class="img-wrapper">
+                        <img src="{{ asset('images/men crossing arms.png') }}" alt="Profissional" class="professional-img">
+                    </div>
+                </div>
+
+                <!-- Coluna do Texto -->
+                <div class="col-md-6">
+                    <h1>PROFISSIONAIS <span class="highlight-text">EXPERIENTES</span></h1>
+                    <p>Encontre aqui o profissional certo para o seu serviço. De reformas a elétrica doméstica, saiba como e onde encontrar profissionais qualificados.</p>
+                    <a href="#" class="btn custom-button">Profissionais e Serviços</a>
+                </div>
+            </div>
         </div>
     </section>
+    <div class="scroll-to-top">
+        <i class="bi bi-chevron-down"></i>
+    </div>
+    <div class="d-flex align-items-center flex-column">
+        <h5 class="text-uppercase pt-4 mb-5">marcas </h5>
+        <div class="d-flex pb-3">
+            <h2 class="text-uppercase pt-2 mx-5">Politintas</h2>
+            <h2 class="text-uppercase pt-2 mx-5">Suvinil</h2>
+            <h2 class="text-uppercase pt-2 mx-5">Eletromil</h2>
+            <h2 class="text-uppercase pt-2 mx-5">Casa do Construtor</h2>
+            <h2 class="text-uppercase pt-2 mx-5">Atlas</h2>
+        </div>
+    </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) { // Quando a rolagem vertical for maior que 50px
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }); 
+    </script>
+
+
+
