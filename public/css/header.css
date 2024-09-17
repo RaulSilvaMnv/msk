@@ -1,3 +1,27 @@
+/* Animação fade-in da esquerda (para a imagem) */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px); /* Move para a esquerda */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Volta para a posição original */
+    }
+}
+
+/* Animação fade-in da direita (para o texto) */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px); /* Move para a direita */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Volta para a posição original */
+    }
+}
+
 /* Wrapper da imagem com fundo laranja */
 .img-wrapper {
     background-color: #f18d1c;
@@ -14,26 +38,13 @@
     animation: fadeInLeft 1.5s forwards; /* Animação de fade-in e movimento */
 }
 
-/* Imagem do homem sem fundo */
-.professional-img {
-    position: absolute;
-    width: 350px; 
-    height: auto;
-    top: 100%; 
-    left: 50%;
-    transform: translate(-50%, -100%); /* Centraliza horizontalmente e alinha a parte de baixo da imagem com o círculo */
-}
 
-/* Animação fade-in da esquerda */
-@keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+
+/* Aplicar a animação da direita para a coluna de texto */
+.text-column {
+    opacity: 0; /* Começa invisível */
+    transform: translateX(100px); /* Move para a direita antes da animação */
+    animation: fadeInRight 1.5s forwards; /* Animação de fade-in e movimento */
 }
 
 /* Estilo geral do header */
@@ -123,6 +134,8 @@ header {
 .custom-button:hover {
     background-color: #d4ac0d;
 }
+
+
 
 .scroll-to-top {
     position: absolute;
