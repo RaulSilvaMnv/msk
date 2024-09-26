@@ -5,7 +5,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top d-flex justify-content-center">
     <div class="container-fluid">
         <!-- Logo / Nome da marca -->
-        <a class="navbar-brand" href="#">LOGO</a>
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="{{asset('images/msk Logo.png')}}" alt="">
+        </a>
         
         <!-- Botão responsivo para telas menores -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,19 +42,21 @@
     <div class="container mt-5">
         <div class="row align-items-center">
             <!-- Coluna da Imagem -->
-            <div class="col-md-6 d-flex justify-content-center">
+            <div class="col-md-6 col-12 d-flex justify-content-center">
                 <div class="img-wrapper">
                     <img src="{{ asset('images/men crossing arms.png') }}" alt="Profissional" class="professional-img img-fluid">
                 </div>
             </div>
-
+    
             <!-- Coluna do Texto -->
-            <div class="col-md-6 text-column">
+            <div class="col-md-6 col-12 text-column">
                 <h1>PROFISSIONAIS <span class="highlight-text">EXPERIENTES</span></h1>
                 <p>Encontre aqui o profissional certo para o seu serviço. De reformas a elétrica doméstica, saiba como e onde encontrar profissionais qualificados.</p>
                 <a href="#" class="btn custom-button">Profissionais e Serviços</a>
             </div>
         </div>
+    </div>
+    
     </div>
 </section>
 

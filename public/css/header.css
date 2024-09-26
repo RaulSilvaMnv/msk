@@ -38,7 +38,10 @@
     animation: fadeInLeft 1.5s forwards; /* Animação de fade-in e movimento */
 }
 
-
+.logo {
+    width: 80px;
+    height: 80px;
+}
 
 /* Aplicar a animação da direita para a coluna de texto */
 .text-column {
@@ -135,8 +138,7 @@ header {
     background-color: #d4ac0d;
 }
 
-
-
+/* Scroll to top */
 .scroll-to-top {
     position: absolute;
     bottom: 20px; 
@@ -170,5 +172,26 @@ header {
     }
     60% {
         transform: translateY(-5px);
+    }
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .professional-img {
+        max-width: 100%;
+        height: auto; /* Garante que a altura se ajuste proporcionalmente */
+    }
+
+    .text-column {
+        text-align: center; /* Centraliza o texto em dispositivos móveis */
+        margin-top: 20px; /* Espaçamento entre imagem e texto */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Ajuste de tamanho da fonte para cabeçalho */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Ajuste de tamanho da fonte para parágrafo */
     }
 }
